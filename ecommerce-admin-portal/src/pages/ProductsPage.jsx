@@ -8,9 +8,10 @@ export default function ProductsPage() {
   const searchRef = useRef(null);
   const searchId = useId();
 
-  const filtered = products.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase()) ||
-    p.category.toLowerCase().includes(search.toLowerCase())
+  const filtered = products.filter(
+    (p) =>
+      p.name.toLowerCase().includes(search.toLowerCase()) ||
+      p.category.toLowerCase().includes(search.toLowerCase())
   );
 
   if (loading) return <p className="status">Loading products...</p>;
@@ -19,7 +20,12 @@ export default function ProductsPage() {
   return (
     <section className="page">
       <div className="page-header">
-        <h2>Product Catalog</h2>
+        <div>
+          <h2>Product Catalog</h2>
+          <p className="subtitle">
+            Showing {filtered.length} of {products.length} products
+          </p>
+        </div>
         <div className="search-box">
           <label htmlFor={searchId} className="sr-only">Search products</label>
           <input
