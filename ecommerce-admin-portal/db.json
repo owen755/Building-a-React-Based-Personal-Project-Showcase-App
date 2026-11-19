@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Coffee Maker",
+      "description": "Programmable 12-cup drip coffee maker with thermal carafe.",
+      "origin": "Kenya",
+      "price": 79.99,
+      "category": "Appliances",
+      "image": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=400"
+    },
+    {
+      "id": "2",
+      "name": "Wireless Headphones",
+      "description": "Noise-cancelling over-ear headphones with 30-hour battery life.",
+      "origin": "Japan",
+      "price": 149.99,
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"
+    },
+    {
+      "id": "3",
+      "name": "Mechanical Keyboard",
+      "description": "Compact tactile mechanical keyboard with aluminum frame.",
+      "origin": "Germany",
+      "price": 119.5,
+      "category": "Accessories",
+      "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=400"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
