@@ -81,4 +81,19 @@ describe('ProductsPage (Read, Search, Delete)', () => {
     );
     expect(screen.queryByText('Coffee Maker')).not.toBeInTheDocument();
   });
+  test('displays an error message when fetching products fails', async () => {
+    globalThis.fetch = vi.fn(() =>
+      Promise.resolve({
+        ok: false,
+      })
+    );
+
+    render(
+      <MemoryRouter initialEntries={['/products']}>
+        <App />
+      </MemoryRouter>
+    );
+
+    expect(await screen.findByText(/error: failed to fetch products/i)).toBeInTheDocument();
+  });
 });
